@@ -1,1 +1,24 @@
+---
+name: PluginName
+author: YourName
+main: PluginName\Mian
+version: 1.0 #plugin_update
+api: [2.0.0] #server_update_2.0.0_is_new_update
 
+commands:
+  cmd:  #cmd_=_plugin_commands
+    description: Command Description
+    use: "/cmd" #text_/_and_your_command
+    permission: cmd.command #text command permission
+  cmd2:
+    descriptin: Command Description2
+    use: "/cmd2"
+    permission: cmd2.command
+
+permission:
+  cmd.command: #text command permission
+    description: "Command Discription"
+    default: op #text op or player permission command
+  cmd2.command
+    description: "Command Description2"
+    default: true #true = player command
