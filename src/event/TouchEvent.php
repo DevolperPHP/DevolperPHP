@@ -14,7 +14,7 @@ class TouchEvent extends PluginBase implements Listener{
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
 	
-	public function onInteract(PlayerInteractEvent $event){
+	public function onTouch(PlayerInteractEvent $event){
 	  $player = $event->getPlayer();
 	  $block = $event->getBlock()->getId();
 	  $name = $player->getName();
