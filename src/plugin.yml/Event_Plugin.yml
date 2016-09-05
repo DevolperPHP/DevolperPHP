@@ -1,1 +1,7 @@
 
+---
+name: PluginName
+author: YourName
+main: PluginName\Main
+version: 1.0 #plugin_update
+api: [2.0.0] #server_update_2.0.0_is_new_update_server
