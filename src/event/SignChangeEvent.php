@@ -3,6 +3,7 @@
 namespace SignChangeEvent;
 
 use pocketmine\plugin\PluginBase;
+use pocketmine\event\Listener;
 use pocketmine\event\block\SignChangeEvent;
 use pocketmine\block\Block;
 use pocketmine\utils\TextFormat as Color;
