@@ -12,4 +12,11 @@ class JoinEvent extends PluginBase implements Listener{
   public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
   }
+  
+  public function onJoin(PlayerJoinEvent $event){
+    $player = $event->getPlayer();
+    $name = $player->getName();
+    
+    $player->setJoinMessage(Color::GREEN."$name Join The Server");
+  }
 }
