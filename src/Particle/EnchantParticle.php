@@ -17,7 +17,7 @@ class EnchantParticle extends PluginBase{
   public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
     switch($cmd->getName()){
       case 'particle':
-        $sender->getLevel()->addParticle(new EnchantParticle($sender))
+        $sender->getLevel()->addParticle(new EnchantParticle($sender));
     }
   }
 }
