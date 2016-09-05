@@ -8,7 +8,7 @@ use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
 use pocketmine\utils\TextFormat as Color;
 
-class AngryVillagerParticle extends PluginBase{
+class EnchantParticle extends PluginBase{
   
   public function onEnable(){
     $this->getServer()->getLogger()->info(Color::GREEN."Plugin is on");
