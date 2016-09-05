@@ -22,7 +22,9 @@ class SignChangeEvent extends PluginBase implements Listener{
 	  	$sign(0, "[Hi]");
 	  	$sign(1, "Hellow $name");
 	  	$sign(2, "Welcome");
-	  	$sign(3, "DevolperPHP");
+	  	$sign(3, "DevolperPHP
+	  	
+	  	$player->sendMessage("Hi");
 	  }
 	}
 }
