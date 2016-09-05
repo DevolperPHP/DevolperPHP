@@ -10,7 +10,7 @@ use pocketmine\utils\TextFormat as Color;
 class SignChangeEvent extends PluginBase implements Listener{
   
   public function onEnable(){
-		$this->getServer()->getPluginManager()->registerEvents($this, $this);
+	$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
 	
 	public function onSignChange(SignChangeEvent){
