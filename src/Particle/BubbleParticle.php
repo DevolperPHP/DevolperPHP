@@ -17,7 +17,7 @@ class BubbleParticle extends PluginBase{
   public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
     switch($cmd->getName()){
       case 'particle':
-        $sender->getLevel()->addParticle(new BubbleParticle($sender))
+        $sender->getLevel()->addParticle(new BubbleParticle($sender));
     }
   }
 }
