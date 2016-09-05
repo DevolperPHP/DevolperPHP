@@ -17,7 +17,7 @@ class AngryVillagerParticle extends PluginBase{
   public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
     switch($cmd->getName()){
       case 'particle':
-        $sender->getLevel()->addParticle(new AngryVillagerParticle($sender))
+        $sender->getLevel()->addParticle(new AngryVillagerParticle($sender));
     }
   }
 }
