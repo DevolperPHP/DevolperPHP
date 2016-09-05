@@ -15,7 +15,7 @@ class Effect extends PluginBase{
   
   public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
     switch($cmd->getName()){
-      case 'cmd':
+      case 'effect':
         $Effect = Effect::getEffect(2);  /* Efeect id */
         $effect->setAmplifier(2);    /* Effect Power */
         $effect->setVisible(true);
