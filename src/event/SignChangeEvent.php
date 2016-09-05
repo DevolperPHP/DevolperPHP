@@ -13,14 +13,16 @@ class SignChangeEvent extends PluginBase implements Listener{
 	$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
 	
-	public function onSignChange(SignChangeEvent){
+	public function onSignChange(SignChangeEvent $event){
 	  $sign = $event->setLine();
 	  $player = $event->getPlayer();
+	  $name = $player->getName();
 	  
-	  $sign(0,"Hi");
-	  $sign(1,"$event->getName()");
-	  $sign(2,"Enjoy =)");
-	  
-	  $player->sedMessage("You Touch The Sign");
+	  if(strtolower(trim($event->()getLine(0))) == "Hi" || strtolower(trim($event->getLine(0))) == "[HI]"){
+	  	$sign(0, "[Hi]");
+	  	$sign(1, "Hellow $name");
+	  	$sign(2, "Welcome");
+	  	$sign(3, "DevolperPHP");
+	  }
 	}
 }
