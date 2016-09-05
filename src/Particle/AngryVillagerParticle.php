@@ -6,6 +6,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\level\particle\AngryVillagerParticle;
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
+use pocketmine\utils\TextFormat as Color;
 
 class AngryVillagerParticle extends PluginBase{
   
