@@ -1,5 +1,7 @@
 <?php
 
+namespace AngryVillagerParticle;
+
 use pocketmine\plugin\PluginBase;
 use pocketmine\level\particle\AngryVillagerParticle;
 use pocketmine\command\CommandSender;
