@@ -18,6 +18,8 @@ class Op_Command extends PluginBase{
       switch($cmd->getName()){
         case 'cmd':
           $sender->sendMessage(Color::WHITE."Hi");
+      } else {
+        $sender->sendMessage(Color::RED."You Not OP !!");
       }
     }
   }
