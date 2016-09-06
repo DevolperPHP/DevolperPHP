@@ -5,6 +5,7 @@ namespace Effect;
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
+use pocketmine\entity\Effect;
 use pocketmine\utils\TextFormat as Color;
 
 class Effect extends PluginBase{
