@@ -10,9 +10,9 @@ use pocketmine\utils\TextFormat as Color;
 class Main extends PluginBase implements Listener{
   
   public $players = 0;
-	public $minute = 0;
-	public $second = 60; # you can change second in public not in time function
-	public $counttype = "down"; # you can change counttype down or up
+  public $minute = 0;
+  public $second = 60; # you can change second in public not in time function
+  public $counttype = "down"; # you can change counttype down or up
   
   public function onEnable(){
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
