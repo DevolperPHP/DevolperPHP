@@ -2,19 +2,10 @@
 
 namespace Time;
 
-use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\scheduler\PluginTask;
-use pocketmine\command\CommandSender;
-use pocketmine\command\Command;
-use pocketmine\event\player\PlayerMoveEvent;
-use pocketmine\event\block\SignChangeEvent;
-use pocketmine\block\Block;
-use pocketmine\level\Level;
-use pocketmine\tile\Sign;
 use pocketmine\utils\TextFormat;
-use pocketmine\utils\Config;
 
 class Main extends PluginBase implements Listener{
 
@@ -22,26 +13,13 @@ class Main extends PluginBase implements Listener{
 
     public $second = 30;
     public $muinit = 1;
-    public $timer = false;
+    public $timer = true;
 
     public function onEnable()
     {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getLogger()->info("$this->prefix §bis §aEnable.");
         $this->getServer()->getScheduler()->scheduleRepeatingTask(new Time($this), 20);
-        $this->saveDefaultConfig();
-        $this->reloadConfig();
-    }
-
-    public function onCommand(CommandSender $sender, Command $command, $label, array $args)
-    {
-        switch ($command->getName()){
-
-            case 'setworld':
-                $world = $sender->getLevel()->getName();
-                $this->getConfig()->set("world", $world);
-                $this->getConfig()->save();
-        }
     }
 
     public function time()
@@ -67,23 +45,5 @@ class Main extends PluginBase implements Listener{
                 }
             }
         }
-    }
-
-    public function onClick(PlayerInteractEvent $event){
-        $p = $event->getPlayer();
-        $block = $event->getBlock()->getId();
-        $level = $p->getLevel()->getName();
-
-        if($block == 152){
-            if ($level == $this->getConfig()->get("world")){
-                $this->timer = true;
-            }
-        }
-    }
-
-    public function onMove(PlayerMoveEvent $event){
-        $p = $event->getPlayer();
-
-        $event->setCancelled(true);
     }
 }
