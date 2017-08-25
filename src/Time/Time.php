@@ -1,6 +1,6 @@
 <?php
 
-namespace Time;
+namespace Timedown;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
